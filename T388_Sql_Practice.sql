@@ -13,6 +13,7 @@ select 2<3 and 23>34 as and_result;
 use t388;
 select database();
 show databases;
+
 CREATE TABLE Employee (
   EmployeeId INT PRIMARY KEY,
   FullName VARCHAR(45) NOT NULL,
