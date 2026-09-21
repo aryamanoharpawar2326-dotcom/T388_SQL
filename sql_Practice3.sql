@@ -18,6 +18,13 @@ values
 (103,"Bhagdas",2,default);
 show create table kisan_info;
 alter table kisan_info drop check kisan_info_chk_1;
-employee
+
+
 select distinct department from employee;
 select distinct gender from employee;
+select department from employee where department = "IT";
+select * from employee
+where department ="IT" or department = "Finance";
+select * from employee
+where department in ("IT","HR");
+
