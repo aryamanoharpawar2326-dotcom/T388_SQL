@@ -50,3 +50,50 @@ select duration,count(*) from projects where duration>=20 group by duration havi
 select * from employee order by EmployeeId desc limit 5;
 select * from employee limit 2,3;
 
+-- 5th practical continuation --
+select distinct gender from employee;
+select distinct department from employee;
+select distinct age from employee;
+select * from projects where employeeid is not null;
+select * from projects where employeeid is null;
+update projects  set employeeid = 1003 where projectid = 6;
+desc projects;
+
+-- IN, BETWEEN AND LIKE --
+select * from employee where age between 25 and 28;
+select * from employee where employeeid between 1003 and 1007;
+select * from employee where employeeid in (1003,1005,1007);
+select * from employee where employeeid = 1003 or employeeid = 1005 or employeeid = 1007;
+select * from employee where age in (23,25,27) and department = "IT";
+
+-- LIKE OPERATOR --
+select * from employee where fullname like "m%";
+select * from employee where fullname like "%y";
+select * from employee where fullname like "%y%";
+select * from employee where fullname like "%t_";
+
+select * from t388.like;
+select * from t388.like where fullname like "a%";
+select * from t388.like where fullname like "_u%";
+select * from `like`;
+select * from t388.like where fullname like "%n%";
+select * from t388.like where fullname like "a%t";
+select avg(salary) from employee;
+select min(salary) from employee;
+select max(salary) from employee;
+select count(*) from employee;
+select count(*) as TotalEmp,avg(salary) as Avgsalary,sum(salary) as totalsalary from employee;
+
+-- MATH FUNCTION --
+select abs(-35); -- absolute function returns unsigned number --
+select abs(500-800);
+select (6*(-7));
+
+select abs(datediff(startdate , enddate)) as duration from projects;
+select mod(12,7) as remainder;
+select ceil(33.7);
+select floor(45.9);
+select truncate(12456.234566,3);
+select truncate(4578,-1);
+
+
