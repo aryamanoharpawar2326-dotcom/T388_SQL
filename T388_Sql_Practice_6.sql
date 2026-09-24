@@ -1,5 +1,5 @@
--- 6 practical --
--- auto increment --
+               -- 6 practical --
+              -- auto increment --
 use t388;
 select exp(2);
 select power(2,4);
@@ -7,7 +7,8 @@ select pow(2,4);
 select sqrt(16);
 select *,sqrt(salary) from employee;
 
--- String Functions --
+               -- String Functions --
+
 select concat("Good","Morning");
 select *,concat(fullname, "-", department) as code from employee;
 select *,concat(fullname, "@email.com") as email from employee;
@@ -26,10 +27,14 @@ select fullname,length(fullname),rtrim(fullname),length(rtrim(fullname)) AS RTRI
 select fullname,trim(fullname) as trim_together from trimmer;
 
 select age from employee where employeeID = 1002 ;
-
+select salary from employee where fullname="John Doe";
 select age,count(*) from employee group by age;
-select * from employee where salary =(select salary from employee where fullname="John Doe");   -- single row sub-query --
+select * from employee where salary =(select salary from employee where fullname="John Doe"); 
+
+              -- single row sub-query --use =,>,<,>=,<=
+  
 select age,count(*) from employee group by age;
 select * from employee where department =(select department from employee where fullname="John Doe");
+select department from employee where fullname="John Doe";
 select max(salary) from employee;
 select max(salary) from employee where salary <(select max(salary) from employee where salary<(select max(salary) from employee));

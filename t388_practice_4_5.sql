@@ -48,7 +48,7 @@ select duration,count(*) from projects group by duration having count(*)>=2 limi
 select duration,count(*) from projects where duration>=20 group by duration having count(*)>=2 order by duration;
 
 select * from employee order by EmployeeId desc limit 5;
-select * from employee limit 2,3;
+select * from employee limit 0,3;
 
 -- 5th practical continuation --
 select distinct gender from employee;
