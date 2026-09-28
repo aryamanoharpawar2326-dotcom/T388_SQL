@@ -26,4 +26,10 @@ select * from employee where department in(select Department from employee where
 
 select Department from employee where department="IT";
 
+select salary+100 from employee where employeeid=1002;
+
+
+use t388;
+select prac_location.id,name,subject,location,marks,total_percent from Prac_location right join prac_percent on prac_location.id = prac_percent.id;
+
 
