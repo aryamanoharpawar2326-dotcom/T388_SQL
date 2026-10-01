@@ -1,4 +1,5 @@
                   -- FOREIGN KEY --
+                  use t388_2;
 create database t388_ForeignK;
 CREATE TABLE Employee (
 ID INT PRIMARY KEY,
@@ -35,6 +36,7 @@ update employee set id = 201 where id = 101;
 select * from employee;
 select * from Project;
 
+                
 
 
 
